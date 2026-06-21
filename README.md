@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cloud Software Market Pulse
 
-## Getting Started
+A source-backed market trends dashboard for public cloud and software companies.
 
-First, run the development server:
+The MVP tracks signal strength across a cloud/software peer set using SEC-style filing excerpts, recent news signals, and company-level trend classification. The current version uses structured seed data so the product experience can be validated before live ingestion is added.
+
+## MVP Peer Set
+
+- Microsoft
+- Amazon
+- Alphabet
+- Oracle
+- Salesforce
+- ServiceNow
+- Snowflake
+- Datadog
+
+## Current Dashboard
+
+- Industry pulse cards for the strongest market trends
+- Trend heatmap by company and theme
+- Company signal cards with filing period, key metric, and risk readout
+- Evidence feed with source type, theme, confidence, and trend direction
+- Company and theme filters
+- Responsive layout with contained heatmap scrolling on mobile
+
+## Trend Taxonomy
+
+- AI monetization
+- Cloud migration
+- Enterprise budget scrutiny
+- Net retention
+- Margin discipline
+- Pricing pressure
+
+## Run Locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://127.0.0.1:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+If the development server hits a local file-watcher limit, build and run the production server:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start -- --hostname 127.0.0.1 --port 3000
+```
 
-## Learn More
+## Next Build Steps
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Add SEC EDGAR company lookup and filing fetch for latest 10-K / 10-Q.
+2. Extract Business, Risk Factors, and MD&A sections.
+3. Classify excerpts against the trend taxonomy with source citations.
+4. Add news ingestion as a recency and confirmation layer.
+5. Persist company, filing, trend, and evidence records in a database.
+6. Replace seeded dashboard data with API-backed records.
