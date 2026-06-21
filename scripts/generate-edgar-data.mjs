@@ -4,7 +4,7 @@ import path from "node:path";
 const OUTPUT_PATH = path.join(process.cwd(), "src", "data", "market-pulse.json");
 
 const SEC_USER_AGENT =
-  process.env.SEC_USER_AGENT ??
+  process.env.SEC_USER_AGENT ||
   "MarketIntelligence/0.1 local-research contact@example.com";
 
 const companies = [
