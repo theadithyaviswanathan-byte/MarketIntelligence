@@ -1,0 +1,767 @@
+{
+  "generatedAt": "2026-06-21T18:29:21.922Z",
+  "sourceMix": [
+    {
+      "label": "SEC filings",
+      "value": 100
+    },
+    {
+      "label": "News signals",
+      "value": 0
+    },
+    {
+      "label": "Company metrics",
+      "value": 0
+    }
+  ],
+  "themes": [
+    {
+      "id": "ai-monetization",
+      "label": "AI monetization",
+      "description": "Commercial lift from AI products, agents, copilots, and infrastructure attach.",
+      "momentum": "up",
+      "strength": 4,
+      "companies": 8
+    },
+    {
+      "id": "cloud-migration",
+      "label": "Cloud migration",
+      "description": "Demand for workloads moving from owned infrastructure to cloud platforms.",
+      "momentum": "up",
+      "strength": 5,
+      "companies": 8
+    },
+    {
+      "id": "budget-scrutiny",
+      "label": "Budget scrutiny",
+      "description": "Enterprise optimization, slower approvals, and pressure on consumption.",
+      "momentum": "flat",
+      "strength": 4,
+      "companies": 8
+    },
+    {
+      "id": "net-retention",
+      "label": "Net retention",
+      "description": "Expansion, churn, seat growth, and workload growth inside existing accounts.",
+      "momentum": "flat",
+      "strength": 4,
+      "companies": 8
+    },
+    {
+      "id": "margin-discipline",
+      "label": "Margin discipline",
+      "description": "Operating leverage, hiring restraint, infrastructure efficiency, and cost control.",
+      "momentum": "up",
+      "strength": 5,
+      "companies": 8
+    },
+    {
+      "id": "pricing-competition",
+      "label": "Pricing pressure",
+      "description": "Competitive discounting, bundled AI features, and platform substitution risk.",
+      "momentum": "up",
+      "strength": 4,
+      "companies": 8
+    }
+  ],
+  "companies": [
+    {
+      "name": "Microsoft",
+      "ticker": "MSFT",
+      "cik": "0000789019",
+      "segment": "Hyperscaler / productivity",
+      "filing": "Latest 10-Q",
+      "period": "2026-03-31",
+      "filingDate": "2026-04-29",
+      "filingUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526191507/msft-20260331.htm",
+      "pulse": "Microsoft shows the strongest filing signal around ai monetization, with secondary evidence around cloud migration.",
+      "risk": "Filing language points to customer spending scrutiny, optimization, or slower approval cycles as the main watch item.",
+      "metric": "Azure + AI demand",
+      "signals": {
+        "ai-monetization": 5,
+        "cloud-migration": 5,
+        "budget-scrutiny": 3,
+        "net-retention": 4,
+        "margin-discipline": 5,
+        "pricing-competition": 4
+      }
+    },
+    {
+      "name": "Amazon",
+      "ticker": "AMZN",
+      "cik": "0001018724",
+      "segment": "Hyperscaler / marketplace",
+      "filing": "Latest 10-Q",
+      "period": "2026-03-31",
+      "filingDate": "2026-04-30",
+      "filingUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000014/amzn-20260331.htm",
+      "pulse": "Amazon shows the strongest filing signal around margin discipline, with secondary evidence around ai monetization.",
+      "risk": "Filing language points to customer spending scrutiny, optimization, or slower approval cycles as the main watch item.",
+      "metric": "AWS operating leverage",
+      "signals": {
+        "ai-monetization": 4,
+        "cloud-migration": 4,
+        "budget-scrutiny": 4,
+        "net-retention": 4,
+        "margin-discipline": 5,
+        "pricing-competition": 4
+      }
+    },
+    {
+      "name": "Alphabet",
+      "ticker": "GOOGL",
+      "cik": "0001652044",
+      "segment": "Hyperscaler / ads",
+      "filing": "Latest 10-Q",
+      "period": "2026-03-31",
+      "filingDate": "2026-04-30",
+      "filingUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm",
+      "pulse": "Alphabet shows the strongest filing signal around cloud migration, with secondary evidence around margin discipline.",
+      "risk": "Filing language points to customer spending scrutiny, optimization, or slower approval cycles as the main watch item.",
+      "metric": "Cloud AI adoption",
+      "signals": {
+        "ai-monetization": 3,
+        "cloud-migration": 5,
+        "budget-scrutiny": 3,
+        "net-retention": 3,
+        "margin-discipline": 5,
+        "pricing-competition": 4
+      }
+    },
+    {
+      "name": "Oracle",
+      "ticker": "ORCL",
+      "cik": "0001341439",
+      "segment": "Database / cloud infrastructure",
+      "filing": "Latest 10-Q",
+      "period": "2026-02-28",
+      "filingDate": "2026-03-11",
+      "filingUrl": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526101045/orcl-20260228.htm",
+      "pulse": "Oracle shows the strongest filing signal around cloud migration, with secondary evidence around margin discipline.",
+      "risk": "Filing language points to customer spending scrutiny, optimization, or slower approval cycles as the main watch item.",
+      "metric": "OCI backlog",
+      "signals": {
+        "ai-monetization": 3,
+        "cloud-migration": 5,
+        "budget-scrutiny": 3,
+        "net-retention": 3,
+        "margin-discipline": 5,
+        "pricing-competition": 4
+      }
+    },
+    {
+      "name": "Salesforce",
+      "ticker": "CRM",
+      "cik": "0001108524",
+      "segment": "Enterprise applications",
+      "filing": "Latest 10-Q",
+      "period": "2026-04-30",
+      "filingDate": "2026-05-28",
+      "filingUrl": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000127/crm-20260430.htm",
+      "pulse": "Salesforce shows the strongest filing signal around ai monetization, with secondary evidence around cloud migration.",
+      "risk": "Filing language points to customer spending scrutiny, optimization, or slower approval cycles as the main watch item.",
+      "metric": "Agentic CRM pipeline",
+      "signals": {
+        "ai-monetization": 5,
+        "cloud-migration": 5,
+        "budget-scrutiny": 4,
+        "net-retention": 5,
+        "margin-discipline": 5,
+        "pricing-competition": 5
+      }
+    },
+    {
+      "name": "ServiceNow",
+      "ticker": "NOW",
+      "cik": "0001373715",
+      "segment": "Workflow automation",
+      "filing": "Latest 10-Q",
+      "period": "2026-03-31",
+      "filingDate": "2026-04-23",
+      "filingUrl": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000056/now-20260331.htm",
+      "pulse": "ServiceNow shows the strongest filing signal around margin discipline, with secondary evidence around cloud migration.",
+      "risk": "Filing language points to customer spending scrutiny, optimization, or slower approval cycles as the main watch item.",
+      "metric": "Workflow AI adoption",
+      "signals": {
+        "ai-monetization": 2,
+        "cloud-migration": 4,
+        "budget-scrutiny": 3,
+        "net-retention": 4,
+        "margin-discipline": 5,
+        "pricing-competition": 4
+      }
+    },
+    {
+      "name": "Snowflake",
+      "ticker": "SNOW",
+      "cik": "0001640147",
+      "segment": "Data cloud",
+      "filing": "Latest 10-Q",
+      "period": "2026-04-30",
+      "filingDate": "2026-05-29",
+      "filingUrl": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000030/snow-20260430.htm",
+      "pulse": "Snowflake shows the strongest filing signal around ai monetization, with secondary evidence around cloud migration.",
+      "risk": "Filing language points to customer spending scrutiny, optimization, or slower approval cycles as the main watch item.",
+      "metric": "Product revenue growth",
+      "signals": {
+        "ai-monetization": 5,
+        "cloud-migration": 5,
+        "budget-scrutiny": 5,
+        "net-retention": 5,
+        "margin-discipline": 5,
+        "pricing-competition": 5
+      }
+    },
+    {
+      "name": "Datadog",
+      "ticker": "DDOG",
+      "cik": "0001561550",
+      "segment": "Observability / security",
+      "filing": "Latest 10-Q",
+      "period": "2026-03-31",
+      "filingDate": "2026-05-07",
+      "filingUrl": "https://www.sec.gov/Archives/edgar/data/1561550/000162828026032328/ddog-20260331.htm",
+      "pulse": "Datadog shows the strongest filing signal around cloud migration, with secondary evidence around net retention.",
+      "risk": "Filing language points to customer spending scrutiny, optimization, or slower approval cycles as the main watch item.",
+      "metric": "Usage expansion",
+      "signals": {
+        "ai-monetization": 3,
+        "cloud-migration": 5,
+        "budget-scrutiny": 4,
+        "net-retention": 5,
+        "margin-discipline": 5,
+        "pricing-competition": 5
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "company": "Snowflake",
+      "ticker": "SNOW",
+      "theme": "ai-monetization",
+      "source": "10-Q",
+      "date": "2026-05-29",
+      "excerpt": "As a result of our historical rapid growth, limited operating history, large number of new product features, including those incorporating artificial intelligence (AI) and machine learning technology (collectively, AI Technology), and unstable macroeconomic conditions, our abi...",
+      "read": "up",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000030/snow-20260430.htm"
+    },
+    {
+      "company": "Snowflake",
+      "ticker": "SNOW",
+      "theme": "cloud-migration",
+      "source": "10-Q",
+      "date": "2026-05-29",
+      "excerpt": "42 Table of Contents New software releases or hardware improvements, like better storage compression, cloud infrastructure processor improvements, and compute optimization, may make our platform more efficient, enabling customers to consume fewer compute, storage, and data tra...",
+      "read": "up",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000030/snow-20260430.htm"
+    },
+    {
+      "company": "Snowflake",
+      "ticker": "SNOW",
+      "theme": "budget-scrutiny",
+      "source": "10-Q",
+      "date": "2026-05-29",
+      "excerpt": "In addition, many customers are attempting to rationalize budgets, prioritize cash flow management, and optimize consumption amidst macroeconomic uncertainty.",
+      "read": "flat",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000030/snow-20260430.htm"
+    },
+    {
+      "company": "Snowflake",
+      "ticker": "SNOW",
+      "theme": "net-retention",
+      "source": "10-Q",
+      "date": "2026-05-29",
+      "excerpt": "Moreover, RPO is influenced by a number of factors, including the timing and size of renewals, the timing and size of purchases of additional capacity, average contract terms, seasonality, changes in foreign currency exchange rates, and the extent to which customers are permit...",
+      "read": "flat",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000030/snow-20260430.htm"
+    },
+    {
+      "company": "Snowflake",
+      "ticker": "SNOW",
+      "theme": "margin-discipline",
+      "source": "10-Q",
+      "date": "2026-05-29",
+      "excerpt": "54 Table of Contents Sales and Marketing Three Months Ended April 30, 2026 2025 % Change (dollars in thousands) Sales and marketing $ 588,952 $ 458,554 28% Percentage of revenue 42% 44% Headcount (at period end) 4,304 3,683 Sales and marketing expenses increased $130.4 million...",
+      "read": "up",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000030/snow-20260430.htm"
+    },
+    {
+      "company": "Snowflake",
+      "ticker": "SNOW",
+      "theme": "pricing-competition",
+      "source": "10-Q",
+      "date": "2026-05-29",
+      "excerpt": "We expect our product gross margin to fluctuate from period to period due to a number of factors, including, but not limited to: (i) fluctuations in the mix and timing of customers’ consumption, which is inherently variable at our customers’ discretion, (ii) our pricing model...",
+      "read": "up",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000030/snow-20260430.htm"
+    },
+    {
+      "company": "Salesforce",
+      "ticker": "CRM",
+      "theme": "ai-monetization",
+      "source": "10-Q",
+      "date": "2026-05-28",
+      "excerpt": "Uncertainty surrounding new and emerging AI applications, including generative AI content creation, AI agents, and multi-organization and multi-agent interoperability considerations may require additional investment in compliance programs, governance frameworks, licensing arra...",
+      "read": "up",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000127/crm-20260430.htm"
+    },
+    {
+      "company": "Salesforce",
+      "ticker": "CRM",
+      "theme": "cloud-migration",
+      "source": "10-Q",
+      "date": "2026-05-28",
+      "excerpt": "Operational and Execution Risks If our security measures, or those of our third-party data center providers, cloud computing platform providers, customers, partners, other third-party vendors or the underlying Internet infrastructure, are breached or otherwise compromised, res...",
+      "read": "up",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000127/crm-20260430.htm"
+    },
+    {
+      "company": "Salesforce",
+      "ticker": "CRM",
+      "theme": "budget-scrutiny",
+      "source": "10-Q",
+      "date": "2026-05-28",
+      "excerpt": "Our attrition rates may increase or fluctuate as a result of various factors, including customer dissatisfaction, customers’ spending levels, mix of customer base, decreases in the number of users at our customers, customer mergers and acquisitions, competition, pricing increa...",
+      "read": "flat",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000127/crm-20260430.htm"
+    },
+    {
+      "company": "Salesforce",
+      "ticker": "CRM",
+      "theme": "net-retention",
+      "source": "10-Q",
+      "date": "2026-05-28",
+      "excerpt": "If our customers do not renew their subscriptions or if they reduce subscriptions at renewal, or if customer usage of consumption-based offerings is below expected levels, our revenue and current remaining performance obligation could decline and our business may suffer.",
+      "read": "flat",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000127/crm-20260430.htm"
+    },
+    {
+      "company": "Salesforce",
+      "ticker": "CRM",
+      "theme": "margin-discipline",
+      "source": "10-Q",
+      "date": "2026-05-28",
+      "excerpt": "36 Table of Contents Operating Expenses Three Months Ended April 30, Variance Dollars (in millions) 2026 As a % of Total Revenues 2025 As a % of Total Revenues Research and development $ 1,627 14 % $ 1,460 15 % $ 167 Sales and marketing 3,769 34 3,429 35 340 General and admini...",
+      "read": "up",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000127/crm-20260430.htm"
+    },
+    {
+      "company": "Salesforce",
+      "ticker": "CRM",
+      "theme": "pricing-competition",
+      "source": "10-Q",
+      "date": "2026-05-28",
+      "excerpt": "Significant pricing practices taken into consideration include the Company’s discounting practices, the size and volume of the Company’s transactions, the customer demographic, the geographic area where services are sold, price lists, the Company's go-to-market strategy, histo...",
+      "read": "up",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000127/crm-20260430.htm"
+    },
+    {
+      "company": "Datadog",
+      "ticker": "DDOG",
+      "theme": "ai-monetization",
+      "source": "10-Q",
+      "date": "2026-05-07",
+      "excerpt": "However, AI technologies are complex and rapidly evolving in a changing competitive market and market acceptance of AI technologies remains uncertain, see “Industry and Competitive Risks—We use artificial intelligence in our products and services which may result in operationa...",
+      "read": "up",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1561550/000162828026032328/ddog-20260331.htm"
+    },
+    {
+      "company": "Datadog",
+      "ticker": "DDOG",
+      "theme": "cloud-migration",
+      "source": "10-Q",
+      "date": "2026-05-07",
+      "excerpt": "Our customers often expand the deployment of our platform across large teams and more broadly within the enterprise as they migrate more workloads to the cloud, find new use cases for our platform, and generally realize the benefits of our platform.",
+      "read": "up",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1561550/000162828026032328/ddog-20260331.htm"
+    },
+    {
+      "company": "Datadog",
+      "ticker": "DDOG",
+      "theme": "budget-scrutiny",
+      "source": "10-Q",
+      "date": "2026-05-07",
+      "excerpt": "A number of factors influence the length and variability of our sales cycle, including the need to educate potential customers about the uses and benefits of our solutions, the discretionary nature of purchasing and budget cycles, and the competitive nature of evaluation and p...",
+      "read": "flat",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1561550/000162828026032328/ddog-20260331.htm"
+    },
+    {
+      "company": "Datadog",
+      "ticker": "DDOG",
+      "theme": "net-retention",
+      "source": "10-Q",
+      "date": "2026-05-07",
+      "excerpt": "Historically, we have experienced seasonality in new customer bookings, as we typically enter into a higher percentage of subscription agreements with new customers and renewals with existing customers in the fourth quarter of the year.",
+      "read": "flat",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1561550/000162828026032328/ddog-20260331.htm"
+    },
+    {
+      "company": "Datadog",
+      "ticker": "DDOG",
+      "theme": "margin-discipline",
+      "source": "10-Q",
+      "date": "2026-05-07",
+      "excerpt": "26 Cost of Revenue Cost of revenue primarily consists of expenses related to providing our products to customers, including payments to our third-party cloud infrastructure providers for hosting our software, personnel-related expenses for operations and global support, includ...",
+      "read": "up",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1561550/000162828026032328/ddog-20260331.htm"
+    },
+    {
+      "company": "Datadog",
+      "ticker": "DDOG",
+      "theme": "pricing-competition",
+      "source": "10-Q",
+      "date": "2026-05-07",
+      "excerpt": "Similarly, our subscription sales could be adversely affected if customers or users within these organizations 38 perceive that features incorporated into competitive products reduce the need for our products or if they prefer to purchase other products that are bundled with s...",
+      "read": "up",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1561550/000162828026032328/ddog-20260331.htm"
+    },
+    {
+      "company": "Amazon",
+      "ticker": "AMZN",
+      "theme": "ai-monetization",
+      "source": "10-Q",
+      "date": "2026-04-30",
+      "excerpt": "In addition, profitability or other intended benefits, if any, in our newer activities (including development and adoption of automation, artificial intelligence, and machine learning technologies for customer and internal use), may not meet our expectations, and we may not be...",
+      "read": "up",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000014/amzn-20260331.htm"
+    },
+    {
+      "company": "Amazon",
+      "ticker": "AMZN",
+      "theme": "cloud-migration",
+      "source": "10-Q",
+      "date": "2026-04-30",
+      "excerpt": "The People’s Republic of China (“PRC”) and India regulate Amazon’s and its affiliates’ businesses and operations in country through regulations and license requirements that may restrict (i) foreign investment in and operation of the internet, IT infrastructure, data centers,...",
+      "read": "up",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000014/amzn-20260331.htm"
+    },
+    {
+      "company": "Amazon",
+      "ticker": "AMZN",
+      "theme": "budget-scrutiny",
+      "source": "10-Q",
+      "date": "2026-04-30",
+      "excerpt": "We Face Significant Inventory Risk In addition to risks described elsewhere in this Item 1A relating to fulfillment network and inventory optimization by us and third parties, we are exposed to significant inventory risks that may adversely affect our operating results as a re...",
+      "read": "flat",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000014/amzn-20260331.htm"
+    },
+    {
+      "company": "Amazon",
+      "ticker": "AMZN",
+      "theme": "net-retention",
+      "source": "10-Q",
+      "date": "2026-04-30",
+      "excerpt": "Our Expansion into New Products, Services, Technologies, and Geographic Regions Subjects Us to Additional Risks We may have limited or no experience in our newer market segments, and our customers may not adopt our product or service offerings.",
+      "read": "flat",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000014/amzn-20260331.htm"
+    },
+    {
+      "company": "Amazon",
+      "ticker": "AMZN",
+      "theme": "margin-discipline",
+      "source": "10-Q",
+      "date": "2026-04-30",
+      "excerpt": "Technology and Infrastructure Technology and infrastructure costs include payroll and related expenses for employees involved in the research and development of new and existing products and services, development, design, and maintenance of our stores, curation and display of...",
+      "read": "up",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000014/amzn-20260331.htm"
+    },
+    {
+      "company": "Amazon",
+      "ticker": "AMZN",
+      "theme": "pricing-competition",
+      "source": "10-Q",
+      "date": "2026-04-30",
+      "excerpt": "Business and Industry Risks We Face Intense Competition Our businesses are rapidly evolving and intensely competitive, and we have many competitors across geographies, including cross-border competition, and in different industries, including physical, e-commerce, and omnichan...",
+      "read": "up",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000014/amzn-20260331.htm"
+    },
+    {
+      "company": "Alphabet",
+      "ticker": "GOOGL",
+      "theme": "ai-monetization",
+      "source": "10-Q",
+      "date": "2026-04-30",
+      "excerpt": "These costs primarily include: • certain AI-focused shared research and development activities, including employee compensation expenses and technical infrastructure usage costs associated with the development of our general AI models; • corporate initiatives such as our phila...",
+      "read": "up",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm"
+    },
+    {
+      "company": "Alphabet",
+      "ticker": "GOOGL",
+      "theme": "cloud-migration",
+      "source": "10-Q",
+      "date": "2026-04-30",
+      "excerpt": "These services provide access to solutions such as AI offerings including our enterprise AI infrastructure, Vertex AI platform, and Gemini Enterprise; cybersecurity offerings; and data and analytics solutions. • Google Workspace includes subscriptions for cloud-based communica...",
+      "read": "up",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm"
+    },
+    {
+      "company": "Alphabet",
+      "ticker": "GOOGL",
+      "theme": "budget-scrutiny",
+      "source": "10-Q",
+      "date": "2026-04-30",
+      "excerpt": "These include, among other things, expectations regarding the growth of our business and revenues, including factors that may impact such growth, and fluctuations in our revenues and margins; statements relating to plans, expectations, and trends about our core business metric...",
+      "read": "flat",
+      "confidence": "Medium",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm"
+    },
+    {
+      "company": "Alphabet",
+      "ticker": "GOOGL",
+      "theme": "net-retention",
+      "source": "10-Q",
+      "date": "2026-04-30",
+      "excerpt": "Revenues by Geography The following table presents revenues by geography as a percentage of revenues, determined based on the addresses of our customers: Three Months Ended March 31, 2025 2026 United States 49 % 49 % EMEA 29 % 28 % APAC 16 % 17 % Other Americas 6 % 6 % Hedging...",
+      "read": "flat",
+      "confidence": "Medium",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm"
+    },
+    {
+      "company": "Alphabet",
+      "ticker": "GOOGL",
+      "theme": "margin-discipline",
+      "source": "10-Q",
+      "date": "2026-04-30",
+      "excerpt": "These include, among other things, expectations regarding the growth of our business and revenues, including factors that may impact such growth, and fluctuations in our revenues and margins; statements relating to plans, expectations, and trends about our core business metric...",
+      "read": "up",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm"
+    },
+    {
+      "company": "Alphabet",
+      "ticker": "GOOGL",
+      "theme": "pricing-competition",
+      "source": "10-Q",
+      "date": "2026-04-30",
+      "excerpt": "Within Google Services, we continue to invest in devices, including our smartphones, home devices, and wearables, which is a highly competitive market with frequent introduction of new products and services, rapid adoption of technological advancements by competitors, increase...",
+      "read": "up",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm"
+    },
+    {
+      "company": "Microsoft",
+      "ticker": "MSFT",
+      "theme": "ai-monetization",
+      "source": "10-Q",
+      "date": "2026-04-29",
+      "excerpt": "AI regulatory areas include model and system development and deployment, frontier model safety, transparency, content provenance, digital replicas, and AI companions. • Anti-corruption: The Foreign Corrupt Practices Act (“FCPA”) and other anti-corruption laws and regulations (...",
+      "read": "up",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526191507/msft-20260331.htm"
+    },
+    {
+      "company": "Microsoft",
+      "ticker": "MSFT",
+      "theme": "cloud-migration",
+      "source": "10-Q",
+      "date": "2026-04-29",
+      "excerpt": "Azure and other cloud services revenue grew 40% driven by demand for services across the platform with continued growth across all workloads.",
+      "read": "up",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526191507/msft-20260331.htm"
+    },
+    {
+      "company": "Microsoft",
+      "ticker": "MSFT",
+      "theme": "budget-scrutiny",
+      "source": "10-Q",
+      "date": "2026-04-29",
+      "excerpt": "These conditions also may add uncertainty to the timing and budget for technology investment decisions by our customers and may cause supply chain disruptions.",
+      "read": "flat",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526191507/msft-20260331.htm"
+    },
+    {
+      "company": "Microsoft",
+      "ticker": "MSFT",
+      "theme": "net-retention",
+      "source": "10-Q",
+      "date": "2026-04-29",
+      "excerpt": "Server products revenue increased slightly, primarily driven by higher purchases of licenses running in multi-cloud environments, offset in part by renewals with lower in-period revenue recognition from the mix of contracts and continued customer shift to cloud. • Enterprise a...",
+      "read": "flat",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526191507/msft-20260331.htm"
+    },
+    {
+      "company": "Microsoft",
+      "ticker": "MSFT",
+      "theme": "margin-discipline",
+      "source": "10-Q",
+      "date": "2026-04-29",
+      "excerpt": "Sales and Marketing (In millions, except percentages) Three Months Ended March 31, Percentage Change Nine Months Ended March 31, Percentage Change 2026 2025 2026 2025 Sales and marketing $ 6,814 $ 6,212 10% $ 19,115 $ 18,369 4% As a percent of revenue 8% 9% (1)ppt 8% 9% (1)ppt...",
+      "read": "up",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526191507/msft-20260331.htm"
+    },
+    {
+      "company": "Microsoft",
+      "ticker": "MSFT",
+      "theme": "pricing-competition",
+      "source": "10-Q",
+      "date": "2026-04-29",
+      "excerpt": "We and our competitors continue to devote significant resources to developing and deploying cloud-based strategies and services for consumers and business customers, and pricing and delivery models are evolving. • We are investing in artificial intelligence (“AI”) across the e...",
+      "read": "up",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526191507/msft-20260331.htm"
+    },
+    {
+      "company": "ServiceNow",
+      "ticker": "NOW",
+      "theme": "ai-monetization",
+      "source": "10-Q",
+      "date": "2026-04-23",
+      "excerpt": "Notes to Condensed Consolidated Financial Statements (unaudited) Unless the context requires otherwise, references in this report to “ServiceNow,” the “Company,” “we,” “us,” and “our” refer to ServiceNow, Inc. and its consolidated subsidiaries. (1) Description of the Business...",
+      "read": "up",
+      "confidence": "Medium",
+      "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000056/now-20260331.htm"
+    },
+    {
+      "company": "ServiceNow",
+      "ticker": "NOW",
+      "theme": "cloud-migration",
+      "source": "10-Q",
+      "date": "2026-04-23",
+      "excerpt": "These expenses are comprised of data center capacity costs, which include colocation costs associated with our data centers as well as interconnectivity between data centers, depreciation related to our infrastructure hardware equipment dedicated for customer use, amortization...",
+      "read": "up",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000056/now-20260331.htm"
+    },
+    {
+      "company": "ServiceNow",
+      "ticker": "NOW",
+      "theme": "budget-scrutiny",
+      "source": "10-Q",
+      "date": "2026-04-23",
+      "excerpt": "Additionally, other macroeconomic events, including interest rates, global inflation and tariffs, have led to economic uncertainty in the global economy.",
+      "read": "flat",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000056/now-20260331.htm"
+    },
+    {
+      "company": "ServiceNow",
+      "ticker": "NOW",
+      "theme": "net-retention",
+      "source": "10-Q",
+      "date": "2026-04-23",
+      "excerpt": "Amortization expenses associated with deferred commissions increased by $23 million for the three months ended March 31, 2026 compared to the three months ended March 31, 2025, primarily due to an increase in contracts with new customers, expansion and renewal contracts.",
+      "read": "flat",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000056/now-20260331.htm"
+    },
+    {
+      "company": "ServiceNow",
+      "ticker": "NOW",
+      "theme": "margin-discipline",
+      "source": "10-Q",
+      "date": "2026-04-23",
+      "excerpt": "Research and Development Three Months Ended March 31, % Change 2026 2025 (dollars in millions) Research and development $ 823 $ 703 17 % Percentage of revenues 22% 23% Research and development expenses (“R&D”) increased by $120 million for the three months ended March 31, 2026...",
+      "read": "up",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000056/now-20260331.htm"
+    },
+    {
+      "company": "ServiceNow",
+      "ticker": "NOW",
+      "theme": "pricing-competition",
+      "source": "10-Q",
+      "date": "2026-04-23",
+      "excerpt": "Such market prices may be quoted prices in active markets for identical assets (Level 1 inputs), pricing determined using inputs other than quoted prices that are observable either directly or indirectly (Level 2 inputs) or using unobservable inputs that are supported by littl...",
+      "read": "up",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000056/now-20260331.htm"
+    },
+    {
+      "company": "Oracle",
+      "ticker": "ORCL",
+      "theme": "ai-monetization",
+      "source": "10-Q",
+      "date": "2026-03-11",
+      "excerpt": "14 Table of Contents ORACLE CORPORATION NOTES TO CONDENSED CONSOLIDATED FINANCIAL STATEMENTS—(Continued) February 28, 2026 (Unaudited) Common Stock On February 2, 2026, we entered into an equity distribution agreement with ‎certain sales agents party thereto, pursuant to which...",
+      "read": "up",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526101045/orcl-20260228.htm"
+    },
+    {
+      "company": "Oracle",
+      "ticker": "ORCL",
+      "theme": "cloud-migration",
+      "source": "10-Q",
+      "date": "2026-03-11",
+      "excerpt": "To address customer demand and enable customer choice, we have certain programs for customers to pivot their applications and infrastructure software licenses and the related software support to the Oracle Cloud for new deployments and to migrate to and expand with the Oracle...",
+      "read": "up",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526101045/orcl-20260228.htm"
+    },
+    {
+      "company": "Oracle",
+      "ticker": "ORCL",
+      "theme": "budget-scrutiny",
+      "source": "10-Q",
+      "date": "2026-03-11",
+      "excerpt": "Our services revenues are affected by many factors including our strategy for, and the competitive position of, our services; customer demand for our cloud and software and hardware offerings and the related services that we may market and sell in connection with these offerin...",
+      "read": "flat",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526101045/orcl-20260228.htm"
+    },
+    {
+      "company": "Oracle",
+      "ticker": "ORCL",
+      "theme": "net-retention",
+      "source": "10-Q",
+      "date": "2026-03-11",
+      "excerpt": "Nine Months Ended February 28, (Dollars in millions) 2026 Change 2025 Net cash provided by operating activities $ 17,357 18% $ 14,664 Net cash used for investing activities $ (35,976 ) 187% $ (12,529 ) Net cash provided by financing activities $ 46,195 840% $ 4,912 Cash flows...",
+      "read": "flat",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526101045/orcl-20260228.htm"
+    },
+    {
+      "company": "Oracle",
+      "ticker": "ORCL",
+      "theme": "margin-discipline",
+      "source": "10-Q",
+      "date": "2026-03-11",
+      "excerpt": "We may incur additional restructuring expenses in future periods due to the initiation of new restructuring plans or from changes in estimated costs associated with existing restructuring plans.",
+      "read": "up",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526101045/orcl-20260228.htm"
+    },
+    {
+      "company": "Oracle",
+      "ticker": "ORCL",
+      "theme": "pricing-competition",
+      "source": "10-Q",
+      "date": "2026-03-11",
+      "excerpt": "Our valuation techniques used to measure the fair values of Level 2 instruments listed in the table above were derived from the following: non-binding market consensus prices that were corroborated by observable market data, quoted market prices for similar instruments, or pri...",
+      "read": "up",
+      "confidence": "High",
+      "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526101045/orcl-20260228.htm"
+    }
+  ]
+}

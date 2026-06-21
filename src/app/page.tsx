@@ -20,335 +20,27 @@ import {
 } from "lucide-react";
 import { useMemo, useState } from "react";
 
-type Direction = "up" | "flat" | "down";
-type SignalStrength = 0 | 1 | 2 | 3 | 4 | 5;
+import marketPulseData from "@/data/market-pulse.json";
+import type {
+  Direction,
+  MarketPulseData,
+  SignalStrength,
+  SourceMixItem,
+} from "@/lib/market-data";
 
-type Theme = {
-  id: string;
-  label: string;
-  description: string;
-  momentum: Direction;
-  strength: SignalStrength;
-  companies: number;
-};
+const marketData = marketPulseData as MarketPulseData;
+const { companies, evidence, themes } = marketData;
 
-type Company = {
-  name: string;
-  ticker: string;
-  segment: string;
-  filing: string;
-  period: string;
-  pulse: string;
-  risk: string;
-  metric: string;
-  signals: Record<string, SignalStrength>;
-};
+const sourceMixIcons = {
+  "SEC filings": FileText,
+  "News signals": Newspaper,
+  "Company metrics": BarChart3,
+} satisfies Record<SourceMixItem["label"], typeof FileText>;
 
-type Evidence = {
-  company: string;
-  ticker: string;
-  theme: string;
-  source: "10-K" | "10-Q" | "News";
-  date: string;
-  excerpt: string;
-  read: Direction;
-  confidence: "High" | "Medium";
-};
-
-const themes: Theme[] = [
-  {
-    id: "ai-monetization",
-    label: "AI monetization",
-    description: "Commercial lift from AI products, agents, copilots, and infrastructure attach.",
-    momentum: "up",
-    strength: 5,
-    companies: 7,
-  },
-  {
-    id: "cloud-migration",
-    label: "Cloud migration",
-    description: "Demand for workloads moving from owned infrastructure to cloud platforms.",
-    momentum: "up",
-    strength: 4,
-    companies: 6,
-  },
-  {
-    id: "budget-scrutiny",
-    label: "Budget scrutiny",
-    description: "Enterprise optimization, slower approvals, and pressure on consumption.",
-    momentum: "flat",
-    strength: 3,
-    companies: 5,
-  },
-  {
-    id: "net-retention",
-    label: "Net retention",
-    description: "Expansion, churn, seat growth, and workload growth inside existing accounts.",
-    momentum: "down",
-    strength: 3,
-    companies: 4,
-  },
-  {
-    id: "margin-discipline",
-    label: "Margin discipline",
-    description: "Operating leverage, hiring restraint, infrastructure efficiency, and cost control.",
-    momentum: "up",
-    strength: 4,
-    companies: 8,
-  },
-  {
-    id: "pricing-competition",
-    label: "Pricing pressure",
-    description: "Competitive discounting, bundled AI features, and platform substitution risk.",
-    momentum: "up",
-    strength: 3,
-    companies: 5,
-  },
-];
-
-const companies: Company[] = [
-  {
-    name: "Microsoft",
-    ticker: "MSFT",
-    segment: "Hyperscaler / productivity",
-    filing: "Latest 10-Q",
-    period: "FY26 Q3",
-    pulse: "AI attach across Azure and Copilot is becoming the clearest cross-segment growth story.",
-    risk: "Capacity expansion and competitive bundling could pressure near-term margins.",
-    metric: "Azure + AI demand",
-    signals: {
-      "ai-monetization": 5,
-      "cloud-migration": 5,
-      "budget-scrutiny": 2,
-      "net-retention": 4,
-      "margin-discipline": 4,
-      "pricing-competition": 3,
-    },
-  },
-  {
-    name: "Amazon",
-    ticker: "AMZN",
-    segment: "Hyperscaler / marketplace",
-    filing: "Latest 10-Q",
-    period: "FY26 Q1",
-    pulse: "AWS demand is recovering as optimization pressure normalizes and AI workloads ramp.",
-    risk: "Large AI infrastructure spend raises utilization and depreciation sensitivity.",
-    metric: "AWS operating leverage",
-    signals: {
-      "ai-monetization": 4,
-      "cloud-migration": 5,
-      "budget-scrutiny": 3,
-      "net-retention": 3,
-      "margin-discipline": 5,
-      "pricing-competition": 3,
-    },
-  },
-  {
-    name: "Alphabet",
-    ticker: "GOOGL",
-    segment: "Hyperscaler / ads",
-    filing: "Latest 10-Q",
-    period: "FY26 Q1",
-    pulse: "Google Cloud is leaning on AI model access, data tooling, and security to win platform spend.",
-    risk: "AI search costs and cloud capex remain central watch items.",
-    metric: "Cloud AI adoption",
-    signals: {
-      "ai-monetization": 5,
-      "cloud-migration": 4,
-      "budget-scrutiny": 2,
-      "net-retention": 3,
-      "margin-discipline": 4,
-      "pricing-competition": 4,
-    },
-  },
-  {
-    name: "Oracle",
-    ticker: "ORCL",
-    segment: "Database / cloud infrastructure",
-    filing: "Latest 10-K",
-    period: "FY26",
-    pulse: "Cloud infrastructure and database modernization are driving stronger enterprise relevance.",
-    risk: "Growth depends on continued execution in a market dominated by larger hyperscalers.",
-    metric: "OCI backlog",
-    signals: {
-      "ai-monetization": 4,
-      "cloud-migration": 4,
-      "budget-scrutiny": 2,
-      "net-retention": 4,
-      "margin-discipline": 4,
-      "pricing-competition": 3,
-    },
-  },
-  {
-    name: "Salesforce",
-    ticker: "CRM",
-    segment: "Enterprise applications",
-    filing: "Latest 10-Q",
-    period: "FY26 Q1",
-    pulse: "AI agents are shifting the narrative from seat expansion to workflow automation.",
-    risk: "Customer budget scrutiny still affects large transformation deals.",
-    metric: "Agentic CRM pipeline",
-    signals: {
-      "ai-monetization": 4,
-      "cloud-migration": 2,
-      "budget-scrutiny": 4,
-      "net-retention": 3,
-      "margin-discipline": 5,
-      "pricing-competition": 4,
-    },
-  },
-  {
-    name: "ServiceNow",
-    ticker: "NOW",
-    segment: "Workflow automation",
-    filing: "Latest 10-Q",
-    period: "FY26 Q1",
-    pulse: "AI workflow automation remains a strong enterprise budget priority.",
-    risk: "Premium valuation depends on sustained expansion and platform consolidation wins.",
-    metric: "Workflow AI adoption",
-    signals: {
-      "ai-monetization": 5,
-      "cloud-migration": 2,
-      "budget-scrutiny": 2,
-      "net-retention": 5,
-      "margin-discipline": 4,
-      "pricing-competition": 2,
-    },
-  },
-  {
-    name: "Snowflake",
-    ticker: "SNOW",
-    segment: "Data cloud",
-    filing: "Latest 10-Q",
-    period: "FY26 Q1",
-    pulse: "AI-ready data platforms are becoming the core growth narrative.",
-    risk: "Consumption volatility and optimization cycles remain the main signal to watch.",
-    metric: "Product revenue growth",
-    signals: {
-      "ai-monetization": 4,
-      "cloud-migration": 3,
-      "budget-scrutiny": 4,
-      "net-retention": 3,
-      "margin-discipline": 3,
-      "pricing-competition": 3,
-    },
-  },
-  {
-    name: "Datadog",
-    ticker: "DDOG",
-    segment: "Observability / security",
-    filing: "Latest 10-Q",
-    period: "FY26 Q1",
-    pulse: "Observability demand is tied to cloud complexity, AI workloads, and security consolidation.",
-    risk: "Usage-based revenue can soften quickly when customers optimize spend.",
-    metric: "Usage expansion",
-    signals: {
-      "ai-monetization": 3,
-      "cloud-migration": 4,
-      "budget-scrutiny": 4,
-      "net-retention": 3,
-      "margin-discipline": 4,
-      "pricing-competition": 3,
-    },
-  },
-];
-
-const evidence: Evidence[] = [
-  {
-    company: "Microsoft",
-    ticker: "MSFT",
-    theme: "ai-monetization",
-    source: "10-Q",
-    date: "2026-04-24",
-    excerpt:
-      "Management language emphasizes AI services as a contributor to cloud demand, with capacity expansion called out as a gating factor.",
-    read: "up",
-    confidence: "High",
-  },
-  {
-    company: "Amazon",
-    ticker: "AMZN",
-    theme: "cloud-migration",
-    source: "10-Q",
-    date: "2026-04-30",
-    excerpt:
-      "AWS commentary points to customers moving past optimization and restarting new workload commitments.",
-    read: "up",
-    confidence: "High",
-  },
-  {
-    company: "Salesforce",
-    ticker: "CRM",
-    theme: "budget-scrutiny",
-    source: "10-Q",
-    date: "2026-05-28",
-    excerpt:
-      "Enterprise sales language still references measured buying behavior and elongated approval cycles for larger deals.",
-    read: "flat",
-    confidence: "Medium",
-  },
-  {
-    company: "Snowflake",
-    ticker: "SNOW",
-    theme: "budget-scrutiny",
-    source: "10-Q",
-    date: "2026-05-21",
-    excerpt:
-      "Consumption trends remain healthy but management continues to separate new workload growth from customer optimization.",
-    read: "flat",
-    confidence: "Medium",
-  },
-  {
-    company: "ServiceNow",
-    ticker: "NOW",
-    theme: "net-retention",
-    source: "10-Q",
-    date: "2026-04-23",
-    excerpt:
-      "Expansion language is concentrated around platform consolidation, workflow automation, and AI-assisted service operations.",
-    read: "up",
-    confidence: "High",
-  },
-  {
-    company: "Datadog",
-    ticker: "DDOG",
-    theme: "pricing-competition",
-    source: "News",
-    date: "2026-06-12",
-    excerpt:
-      "Recent coverage frames observability budgets as consolidating around vendors that combine monitoring, security, and AI workload visibility.",
-    read: "up",
-    confidence: "Medium",
-  },
-  {
-    company: "Oracle",
-    ticker: "ORCL",
-    theme: "cloud-migration",
-    source: "10-K",
-    date: "2026-06-10",
-    excerpt:
-      "Cloud infrastructure demand is described alongside database modernization and multi-cloud deployment patterns.",
-    read: "up",
-    confidence: "High",
-  },
-  {
-    company: "Alphabet",
-    ticker: "GOOGL",
-    theme: "margin-discipline",
-    source: "10-Q",
-    date: "2026-04-25",
-    excerpt:
-      "Cloud profitability is positioned as improving while AI investment and infrastructure costs remain a central tradeoff.",
-    read: "up",
-    confidence: "High",
-  },
-];
-
-const sourceMix = [
-  { label: "SEC filings", value: 72, icon: FileText },
-  { label: "News signals", value: 18, icon: Newspaper },
-  { label: "Company metrics", value: 10, icon: BarChart3 },
-];
+const sourceMix = marketData.sourceMix.map((item) => ({
+  ...item,
+  icon: sourceMixIcons[item.label],
+}));
 
 const themeById = new Map(themes.map((theme) => [theme.id, theme]));
 
@@ -416,6 +108,11 @@ export default function Home() {
   const strongestTheme = themes.reduce((top, theme) =>
     theme.strength > top.strength ? theme : top,
   );
+  const generatedDate = new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  }).format(new Date(marketData.generatedAt));
 
   return (
     <main className="min-h-screen bg-[#f7f7f2] text-zinc-950">
@@ -425,7 +122,7 @@ export default function Home() {
             <div>
               <div className="mb-2 flex items-center gap-2 text-sm font-medium text-teal-700">
                 <DatabaseZap className="h-4 w-4" />
-                Cloud Software Market Pulse
+                Cloud Software Market Pulse · EDGAR-backed snapshot
               </div>
               <h1 className="max-w-4xl text-3xl font-semibold tracking-normal text-zinc-950 sm:text-4xl">
                 Public-company trend monitor for cloud and software markets
@@ -472,7 +169,7 @@ export default function Home() {
                 <ShieldCheck className="h-4 w-4 text-emerald-700" />
               </div>
               <p className="mt-3 text-2xl font-semibold">Source-backed</p>
-              <p className="mt-1 text-sm text-zinc-600">SEC first, news as confirmation</p>
+              <p className="mt-1 text-sm text-zinc-600">Latest SEC filing excerpts</p>
             </div>
             <div className="rounded-lg border border-zinc-200 bg-zinc-50 p-4">
               <div className="flex items-center justify-between text-sm text-zinc-500">
@@ -480,7 +177,7 @@ export default function Home() {
                 <Clock3 className="h-4 w-4 text-indigo-700" />
               </div>
               <p className="mt-3 text-2xl font-semibold">Quarterly</p>
-              <p className="mt-1 text-sm text-zinc-600">Latest 10-K / 10-Q snapshot</p>
+              <p className="mt-1 text-sm text-zinc-600">Generated {generatedDate}</p>
             </div>
           </section>
         </div>
@@ -730,6 +427,16 @@ export default function Home() {
                         </span>
                       </div>
                       <p className="text-sm leading-6 text-zinc-700">{item.excerpt}</p>
+                      {item.url ? (
+                        <a
+                          className="mt-3 inline-flex text-sm font-medium text-teal-700 hover:text-teal-900"
+                          href={item.url}
+                          rel="noreferrer"
+                          target="_blank"
+                        >
+                          Open SEC filing
+                        </a>
+                      ) : null}
                     </div>
                     <div className="lg:text-right">
                       <SignalBadge
